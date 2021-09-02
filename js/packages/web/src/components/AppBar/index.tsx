@@ -63,6 +63,9 @@ const DefaultActions = ({ vertical = false }: { vertical?: boolean }) => {
       <Link to={`/artists`}>
         <Button className="app-btn">Creators</Button>
       </Link>
+      <a href="https://y.at/⌛♟️🎩" target="_blank">
+        <Button className="app-btn">⌛♟️🎩</Button>
+      </a>
     </div>
   );
 };
@@ -96,6 +99,11 @@ const MetaplexMenu = () => {
                 <Link to={`/artists`}>
                   <Button className="app-btn">Creators</Button>
                 </Link>
+              </Menu.Item>
+              <Menu.Item>
+                <a href="https://y.at/⌛♟️🎩" target="_blank">
+                  <Button className="app-btn">⌛♟️🎩</Button>
+                </a>
               </Menu.Item>
             </Menu>
           }
