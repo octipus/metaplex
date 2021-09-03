@@ -487,7 +487,15 @@ export function Notifications() {
       content={content}
       trigger="click"
     >
-      <h1 className="title">TM</h1>
+      {/* <h1 className="title">TM</h1> */}
+      <img
+        style={{
+          maxHeight: '30px',
+          margin: '10px 10px 10px 0px'
+        }}
+        src="/favicon-96x96.png"
+        alt="logo">
+      </img>
     </Popover>
   );
 
