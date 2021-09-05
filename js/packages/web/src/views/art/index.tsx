@@ -23,7 +23,7 @@ export const ArtView = () => {
   if (art.type === ArtType.NFT) {
     badge = 'Unique';
   } else if (art.type === ArtType.Master) {
-    badge = 'NFT 0';
+    badge = '1st Edition';
   } else if (art.type === ArtType.Print) {
     badge = `${art.edition} of ${art.supply}`;
   }
@@ -83,7 +83,7 @@ export const ArtView = () => {
             style={{ textAlign: 'left', fontSize: '1.4rem' }}
           >
             <Row>
-              <div style={{ fontWeight: 700, fontSize: '4rem' }}>
+              <div style={{ fontWeight: 700, fontSize: '3rem' }}>
                 {art.title || <Skeleton paragraph={{ rows: 0 }} />}
               </div>
             </Row>
@@ -115,8 +115,9 @@ export const ArtView = () => {
                         <MetaAvatar creators={[creator]} size={64} />
                         <div>
                           <span className="creator-name">
-                            {creator.name ||
-                              shortenAddress(creator.address || '')}
+                            Timeless Masters <br />
+                             ({creator.name ||
+                              shortenAddress(creator.address || '')})
                           </span>
                           <div style={{ marginLeft: 10 }}>
                             {!creator.verified &&
@@ -189,12 +190,15 @@ export const ArtView = () => {
             <div className="info-header">ABOUT THE CREATION</div>
             <div className="info-content">{description}</div>
             <br />
-            {/*
-              TODO: add info about artist
-
-
             <div className="info-header">ABOUT THE CREATOR</div>
-            <div className="info-content">{art.about}</div> */}
+            {/* <div className="info-content">{art.about}</div> */}
+            <div className="info-content">
+            Timeless Masters 1st edition is a unique collection of limited NFT cards.
+            <br /><br />
+            Created in the memory of our greatest pioneers of modern civilization, Timeless Masters is a tribute to those that have contributed to humanity in a positive way, aiming at imortalizing their contributions on the blockchain.
+            <br /><br />
+            Official Website: <a href="https://y.at/⌛♟️🎩" alt="Timeless masters official website" target="_blank">⌛♟️🎩</a>
+            </div>
           </Col>
           <Col span="12">
             {attributes &&
